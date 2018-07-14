@@ -7,22 +7,13 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   // Cache CSS files
   /.*\.css/,
+    /.*\.html/,
   // Use cache but update in the background ASAP
   workbox.strategies.staleWhileRevalidate({
     // Use a custom cache name
     cacheName: 'css-cache',
   })
 );
-workbox.routing.registerRoute(
-  // Cache CSS files
-  /.*\.html/,
-  // Use cache but update in the background ASAP
-  workbox.strategies.staleWhileRevalidate({
-    // Use a custom cache name
-    cacheName: 'html-cache',
-  })
-);
-
 workbox.routing.registerRoute(
   // Cache image files
   /.*\.(?:png|jpg|jpeg|svg|gif)/,
