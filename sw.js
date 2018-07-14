@@ -3,6 +3,7 @@ workbox.routing.registerRoute(
   new RegExp('.*\.js'),
   workbox.strategies.networkFirst()
 );
+
 workbox.routing.registerRoute(
   // Cache CSS files
   /.*\.css/,
@@ -12,6 +13,7 @@ workbox.routing.registerRoute(
     cacheName: 'css-cache',
   })
 );
+
 workbox.routing.registerRoute(
   // Cache image files
   /.*\.(?:png|jpg|jpeg|svg|gif)/,
