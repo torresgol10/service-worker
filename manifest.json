@@ -5,8 +5,8 @@
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
-  "Scope": "/",
-  "start_url": "index.html?launcher=true",
+  "Scope": "https://torresgol10.github.io/service-worker/",
+  "start_url": "https://torresgol10.github.io/service-worker/index.html?launcher=true",
   "prefer_related_applications": true,
   "related_applications": [
   {
