@@ -5,8 +5,8 @@
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
-  "Scope": "https://torresgol10.github.io/service-worker/",
-  "start_url": "/?utm_source=homescreen",
+  "scope": "/service-worker/",
+  "start_url": "/service-worker/?utm_source=homescreen",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
