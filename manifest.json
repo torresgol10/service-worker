@@ -1,12 +1,14 @@
 {
+  "gcm_sender_id": "482941778795",
+  "gcm_sender_id_comment": "Do not change the GCM Sender ID",
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "description": "No se que poner esto es  una prueba",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
-  "scope": "/service-worker/",
-  "start_url": "/service-worker/?utm_source=homescreen",
+  "scope": "/",
+  "start_url": "/?utm_source=homescreen",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
