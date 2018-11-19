@@ -28,7 +28,7 @@ workbox.routing.registerRoute(
         // Keep at most 50 entries.
         maxEntries: 50,
         // Don't keep any entries for more than 30 days.
-        maxAgeSeconds: 30 * 24 * 60 * 60,
+        maxAgeSeconds: 120,
         // Automatically cleanup if quota is exceeded.
         purgeOnQuotaError: true,
       }),
