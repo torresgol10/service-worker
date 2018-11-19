@@ -8,10 +8,7 @@ workbox.routing.registerRoute(
   // Cache CSS files
   /.*\.css/,
   // Use cache but update in the background ASAP
-  workbox.strategies.staleWhileRevalidate({
-    // Use a custom cache name
-    cacheName: 'css-cache',
-  })
+   workbox.strategies.networkFirst()
 );
 
 workbox.routing.registerRoute(
@@ -31,3 +28,12 @@ workbox.routing.registerRoute(
     ],
   })
 );
+self.addEventListener('install', function(e) {
+ e.waitUntil(
+   caches.open('airhorner').then(function(cache) {
+     return cache.addAll([
+       '/index.html',
+     ]);
+   })
+ );
+});
