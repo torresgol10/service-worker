@@ -58,6 +58,8 @@
       // messages.
       const messaging = firebase.messaging();
       console.log(messaging);
+      messaging.resquestPermission().then(function(){ return messaging.getToken(); }).then(function(token){ console.log(token); }); 
+
       messaging.setBackgroundMessageHandler(function(payload) {
         console.log('[firebase-messaging-sw.js] Received background message ', payload);
         // Customize notification here
