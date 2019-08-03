@@ -54,6 +54,10 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+      // Retrieve an instance of Firebase Messaging so that it can handle background
+      // messages.
+      const messaging = firebase.messaging();
+      console.log(messaging);
     </script>
     <meta charset="utf-8">
     <meta name="google-site-verification" content="oD7p0ExsVLABrtL6qAqItUs0-vs6e_8eCSfvsm-9PZA" />
