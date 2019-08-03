@@ -35,14 +35,25 @@
     });
 
     </script>
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+
     <script>
-      var OneSignal = window.OneSignal || [];
-      OneSignal.push(function() {
-        OneSignal.init({
-          appId: "ec822767-03c0-4e44-a8fc-8216c6747bca",
-        });
-      });
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDfnz60THIT2F-nroRnxhXkQLZJp2NGhEA",
+        authDomain: "push-notification-f71cd.firebaseapp.com",
+        databaseURL: "https://push-notification-f71cd.firebaseio.com",
+        projectId: "push-notification-f71cd",
+        storageBucket: "",
+        messagingSenderId: "660693178685",
+        appId: "1:660693178685:web:78e1854a1d88592a"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
     </script>
     <meta charset="utf-8">
     <meta name="google-site-verification" content="oD7p0ExsVLABrtL6qAqItUs0-vs6e_8eCSfvsm-9PZA" />
