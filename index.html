@@ -35,45 +35,7 @@
     });
 
     </script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#config-web-app -->
-
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDfnz60THIT2F-nroRnxhXkQLZJp2NGhEA",
-        authDomain: "push-notification-f71cd.firebaseapp.com",
-        databaseURL: "https://push-notification-f71cd.firebaseio.com",
-        projectId: "push-notification-f71cd",
-        storageBucket: "",
-        messagingSenderId: "660693178685",
-        appId: "1:660693178685:web:78e1854a1d88592a"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      // Retrieve an instance of Firebase Messaging so that it can handle background
-      // messages.
-      const messaging = firebase.messaging();
-      console.log(messaging);
-      messaging.resquestPermission().then(function(){ return messaging.getToken(); }).then(function(token){ console.log(token); }); 
-
-      messaging.setBackgroundMessageHandler(function(payload) {
-        console.log('[firebase-messaging-sw.js] Received background message ', payload);
-        // Customize notification here
-        var notificationTitle = 'Background Message Title';
-        var notificationOptions = {
-          body: 'Background Message body.',
-          icon: '/firebase-logo.png'
-        };
-
-        return self.registration.showNotification(notificationTitle,
-          notificationOptions);
-      });
-
-    </script>
     <meta charset="utf-8">
     <meta name="google-site-verification" content="oD7p0ExsVLABrtL6qAqItUs0-vs6e_8eCSfvsm-9PZA" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -345,6 +307,45 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDfnz60THIT2F-nroRnxhXkQLZJp2NGhEA",
+        authDomain: "push-notification-f71cd.firebaseapp.com",
+        databaseURL: "https://push-notification-f71cd.firebaseio.com",
+        projectId: "push-notification-f71cd",
+        storageBucket: "",
+        messagingSenderId: "660693178685",
+        appId: "1:660693178685:web:78e1854a1d88592a"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // Retrieve an instance of Firebase Messaging so that it can handle background
+      // messages.
+      const messaging = firebase.messaging();
+      console.log(messaging);
+      messaging.resquestPermission().then(function(){ return messaging.getToken(); }).then(function(token){ console.log(token); }); 
+
+      messaging.setBackgroundMessageHandler(function(payload) {
+        console.log('[firebase-messaging-sw.js] Received background message ', payload);
+        // Customize notification here
+        var notificationTitle = 'Background Message Title';
+        var notificationOptions = {
+          body: 'Background Message body.',
+          icon: '/firebase-logo.png'
+        };
+
+        return self.registration.showNotification(notificationTitle,
+          notificationOptions);
+      });
+    </script>
 
   </body>
 
